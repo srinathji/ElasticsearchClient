@@ -18,24 +18,3 @@ libraryDependencies ++= Seq(
 
 
 )
-
-
-
-
-
-
-
-/*
-// libraryDependencies And a the resolver By  Cory G Watson gphat
--- tested havnig some issues with this library
-libraryDependencies += "com.github.gphat" %% "wabisabi" % "2.2.0"
-resolvers += "gphat" at "https://raw.github.com/gphat/mvn-repo/master/releases/"
-*/
-//scalaVersion := "2.12.3"
-
-//
-//// https://mvnrepository.com/artifact/org.scalastuff/esclient
-//libraryDependencies += "org.scalastuff" %% "esclient" % "1.3.0"
-
-
-
