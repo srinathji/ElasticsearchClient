@@ -32,7 +32,6 @@ object TcpClientExampleApp extends App {
 
 
 
-
   // now we can search for the document we just indexed
   val resp1 = client.execute { search("19feb" / "threepm") query "vicky" }.await
 

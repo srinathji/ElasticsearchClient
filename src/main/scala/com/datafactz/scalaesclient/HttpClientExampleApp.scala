@@ -12,9 +12,6 @@ object HttpClientExampleApp extends App {
 
   val client = HttpClient(ElasticsearchClientUri("localhost", 9200))
 
-
-
-
   //  Function to create the index
   //  Function to Insert a document in the Index
 
