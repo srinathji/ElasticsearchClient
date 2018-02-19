@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testesclient.iml" filepath="$PROJECT_DIR$/.idea/modules/testesclient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testesclient-build.iml" filepath="$PROJECT_DIR$/.idea/modules/testesclient-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/elasticsearchclient.iml" filepath="$PROJECT_DIR$/.idea/modules/elasticsearchclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/elasticsearchclient-build.iml" filepath="$PROJECT_DIR$/.idea/modules/elasticsearchclient-build.iml" />
     </modules>
   </component>
 </project>
