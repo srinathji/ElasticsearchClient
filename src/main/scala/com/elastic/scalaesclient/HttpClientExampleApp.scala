@@ -1,4 +1,4 @@
-package com.datafactz.scalaesclient
+package com.elastic.scalaesclient
 
 import com.sksamuel.elastic4s.ElasticsearchClientUri
 import com.sksamuel.elastic4s.http.HttpClient
