@@ -1,4 +1,7 @@
 package com.elastic.scalaesclient
+/**
+  * Created by Srinathji on 16/2/18.
+  */
 
 import com.sksamuel.elastic4s.ElasticsearchClientUri
 import com.sksamuel.elastic4s.http.HttpClient
