@@ -46,6 +46,7 @@ object TcpClientExampleApp extends App {
 
 //  println("\n Index Inserted:" +insertIndex) // will result the output message of insertIndex variable
 
+
   /** Function to Insert  Bulk documents into the Index */
   /* client.execute {
      bulk(
@@ -62,6 +63,7 @@ object TcpClientExampleApp extends App {
     search("19febsix" / "six") query "sri"
   }.await)
 //  println("\n Search Result: "+searchIndex)
+
 
 
 
