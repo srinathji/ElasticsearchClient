@@ -29,14 +29,14 @@ object Scala4s extends App {
    implicit val client = TcpClient.transport(settings, ElasticsearchClientUri("elasticsearch://localhost:9300"))
 
  /** Executable Code*/
-//    val futureArtist = for {
-//      _ <- createElasticIndex
-//      _ <- insertDocument
-//      resp <- queryDocument
-//   } yield resp.to[Artist]
+    val futureArtist = for {
+      _ <- createElasticIndex
+      _ <- insertDocument
+      resp <- queryDocument
+   } yield resp.to[Artist]
 //
-//   val artistList = Await.result(futureArtist, Duration.Inf)
-//   artistList.foreach(println)
+   val artistList = Await.result(futureArtist, Duration.Inf)
+   artistList.foreach(println)
 
 
 
@@ -45,8 +45,8 @@ object Scala4s extends App {
    def createElasticIndex(implicit client: TcpClient) : Future[CreateIndexResponse] = {
       import com.sksamuel.elastic4s.ElasticDsl._
       client.execute {
-         createIndex("bands").mappings(
-            mapping("artist") as(
+         createIndex("diwosri").mappings(
+            mapping("sri") as(
                textField("name")
                )
          )
@@ -59,7 +59,7 @@ object Scala4s extends App {
    def insertDocument(implicit client: TcpClient) : Future[RichIndexResponse] = {
       import com.sksamuel.elastic4s.ElasticDsl._
       client.execute {
-         indexInto("bands" / "artists") doc Artist("nirvana") refresh(RefreshPolicy.IMMEDIATE)
+         indexInto("diwosri" / "sri") doc Artist("nirvana") refresh(RefreshPolicy.IMMEDIATE)
       }
    }
 
@@ -68,7 +68,7 @@ object Scala4s extends App {
   def queryDocument(implicit client: TcpClient) : Future[RichSearchResponse] = {
       import com.sksamuel.elastic4s.ElasticDsl._
       client.execute {
-         search("bands" / "artists") query "nirvana"
+         search("diwosri" / "artists") query "nirvana"
       }
    }
 
@@ -80,7 +80,8 @@ object Scala4s extends App {
 //  client.close()
 //  client.execute { deleteIndex("_all") } // Deletes ALL indices!
   // Or alternatively:
-  client.execute { delete index "movies" }
+  //
+  //client.execute { delete index "movies" }
 //  client.execute { delete index ("bands", "countries") } // Deletes two indices
 //  AWGeNsTN56MxXjnK59Nt
 }
